@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyChat App</title>
+  <link rel="stylesheet" href="/public/main.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h2>WhatsChat</h2>
+  <hr>
+  <div class="mario-chat">
+    <div class="chat-window" id="chat">
+      <div>
+        <div class="output" id="output">
+          <% messages.map(msg => { %>
+            <p><strong><%= msg.name %>: </strong><%= msg.message %></p>
+          <% }); %>
+        </div>
+         <div class="time" id=""></div>
+      </div>
+      <div id="feedback"></div>
+    </div>
+    <input type="text" id="name" placeholder="Enter Your Name">
+    <input type="text" id="message" placeholder="Enter a Message">
+    <button id="send">Send</button>
+  </div>
+  <script src="/public/main.js"></script>
+</body>
+</html>
